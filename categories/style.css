@@ -1,12 +1,12 @@
 .page-container {
   width: 100%;
   min-height: 100vh;
-  background-image: url("./img/page-back.jpg");
+  background-image: url("../img/page-back.jpg");
   background-size: 100% 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
   box-sizing: border-box;
   padding: 7% 5%;
 }
@@ -29,6 +29,7 @@ li {
   flex-wrap: wrap;
   flex-direction: row;
   font-size: 1.6rem;
+  margin-bottom: 25px;
 }
 .contacts a {
   text-decoration: underline;
@@ -39,6 +40,7 @@ li {
   align-self: center;
   display: flex;
   flex-direction: row;
+  margin-bottom: 25px;
 }
 .menu .menu-btn {
   transform: skew(-30deg);
@@ -65,7 +67,8 @@ li {
 
 h1 {
   align-self: center;
-  font-size: 2.9rem;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
 p,
@@ -73,36 +76,28 @@ li {
   font-size: 1.5rem;
 }
 
-.text {
-  max-width: 1450px;
-  align-self: center;
-}
-
-.sections-btn {
-  width: -moz-fit-content;
-  width: fit-content;
-  min-width: 150px;
-  align-self: center;
-}
-.sections-btn a {
-  letter-spacing: 0.12rem;
-  padding: 5px 20px;
-  display: block;
-  width: 100%;
-  text-align: center;
-  font-size: 1.9rem;
-}
-
 h2 {
   font-size: 1.7rem;
   font-weight: 400;
 }
 
-.instructions {
-  margin-left: 35px;
+.categories {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
-.instructions ol {
-  list-style: decimal inside;
+.categories .categories-item {
+  border: none;
+  border-radius: 0;
+  min-height: 100px;
+}
+.categories .categories-item a {
+  display: block;
+  padding: 12px 10px;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
 }
 
 footer {
@@ -132,6 +127,10 @@ footer p {
     padding-bottom: 12%;
     padding-top: 9%;
   }
+  .categories {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @media (max-width: 1024px) and (min-height: 800px) {
   .page-container {
@@ -152,6 +151,9 @@ footer p {
   .page-container {
     padding-bottom: 17%;
     padding-top: 15%;
+  }
+  .categories .categories-item {
+    min-height: 10px;
   }
 }
 @media (max-width: 768px) and (min-height: 750px) {
@@ -175,6 +177,17 @@ footer p {
 @media (max-width: 425px) {
   html {
     font-size: 12px;
+  }
+  .categories {
+    gap: 5px;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .categories .categories-item {
+    min-height: 10px;
+  }
+  .categories .categories-item a {
+    padding: 6px;
   }
 }
 @media (max-width: 425px) and (min-height: 700px) {

@@ -1,9 +1,9 @@
 .page-container {
   width: 100%;
   min-height: 100vh;
-  background-image: url("./img/page-back.jpg");
+  background-image: url("../img/page-back.jpg");
   background-size: 100% 100%;
-  position: relative;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -60,7 +60,7 @@ li {
 }
 
 .btn {
-  background-color: rgba(22, 20, 21, 0.3);
+  background-color: rgba(22, 20, 21, 0.35);
   border: black 2px solid;
   border-radius: 4px;
   &:hover {
@@ -78,36 +78,9 @@ li {
   font-size: 1.5rem;
 }
 
-.text {
-  max-width: 1450px;
-  align-self: center;
-}
-
-.sections-btn {
-  width: fit-content;
-  min-width: 150px;
-  align-self: center;
-  a {
-    letter-spacing: 0.12rem;
-    padding: 5px 20px;
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 1.9rem;
-  }
-}
-
 h2 {
   font-size: 1.7rem;
   font-weight: 400;
-}
-
-.instructions {
-  margin-left: 35px;
-
-  ol {
-    list-style: decimal inside;
-  }
 }
 
 footer {

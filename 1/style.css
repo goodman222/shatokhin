@@ -1,0 +1,211 @@
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("./img/page-back.jpg");
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 7% 5%;
+}
+
+h1,
+h2,
+p,
+a,
+li {
+  font-family: Monotype Corsiva;
+  color: black;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgb(199, 142, 153);
+}
+
+.contacts {
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 1.6rem;
+}
+.contacts a {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.menu {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+}
+.menu .menu-btn {
+  transform: skew(-30deg);
+  min-width: 150px;
+  margin-right: 5px;
+}
+.menu .menu-btn a {
+  transform: skew(30deg);
+  padding: 5px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn {
+  background-color: rgba(22, 20, 21, 0.3);
+  border: black 2px solid;
+  border-radius: 4px;
+}
+.btn:hover {
+  background-color: rgba(22, 20, 21, 0.5);
+}
+
+h1 {
+  align-self: center;
+  font-size: 2.9rem;
+}
+
+p,
+li {
+  font-size: 1.5rem;
+}
+
+.text {
+  max-width: 1450px;
+  align-self: center;
+}
+
+.sections-btn {
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 150px;
+  align-self: center;
+}
+.sections-btn a {
+  letter-spacing: 0.12rem;
+  padding: 5px 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.instructions {
+  margin-left: 35px;
+}
+.instructions ol {
+  list-style: decimal inside;
+}
+
+footer {
+  position: absolute;
+  bottom: 5%;
+}
+footer p {
+  font-size: 1rem;
+}
+
+@media (min-height: 750px) {
+  .page-container {
+    padding-bottom: 9%;
+  }
+}
+@media (min-height: 1000px) {
+  .page-container {
+    padding-bottom: 12%;
+    padding-top: 9%;
+  }
+}
+@media (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+  .page-container {
+    padding-bottom: 12%;
+    padding-top: 9%;
+  }
+}
+@media (max-width: 1024px) and (min-height: 800px) {
+  .page-container {
+    padding-bottom: 15%;
+    padding-top: 12%;
+  }
+}
+@media (max-width: 1024px) and (min-height: 1000px) {
+  .page-container {
+    padding-bottom: 25%;
+    padding-top: 25%;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+  .page-container {
+    padding-bottom: 17%;
+    padding-top: 15%;
+  }
+}
+@media (max-width: 768px) and (min-height: 750px) {
+  .page-container {
+    padding-bottom: 20%;
+    padding-top: 17%;
+  }
+}
+@media (max-width: 768px) and (min-height: 850px) {
+  .page-container {
+    padding-bottom: 25%;
+    padding-top: 20%;
+  }
+}
+@media (max-width: 768px) and (min-height: 1100px) {
+  .page-container {
+    padding-bottom: 34%;
+    padding-top: 34%;
+  }
+}
+@media (max-width: 425px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 425px) and (min-height: 700px) {
+  .page-container {
+    padding-bottom: 20%;
+    padding-top: 17%;
+  }
+}
+@media (max-width: 425px) and (min-height: 800px) {
+  .page-container {
+    padding-bottom: 25%;
+    padding-top: 20%;
+  }
+}
+@media (max-width: 425px) and (min-height: 1000px) {
+  .page-container {
+    padding-bottom: 35%;
+    padding-top: 35%;
+  }
+}
+@media (max-width: 320px) {
+  html {
+    font-size: 11px;
+  }
+  .instructions {
+    margin-left: 5px;
+  }
+  .menu {
+    flex-direction: column;
+  }
+  .menu .menu-btn {
+    margin-bottom: 10px;
+  }
+}

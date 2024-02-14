@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Юрист Шатохин М.Ю.</title>
+    <link rel="stylesheet" href="./../../normilize.css" />
+
+    <link rel="stylesheet" href="./../common/style.css" />
+  </head>
+  <body>
+    <div class="page-container" id="app">
+      <div class="contacts">
+        <p>Шатохин Михаил Юрьевич; Тел.:&nbsp;</p>
+        <a href="tel:+79165678904">8 916 567 89 04;</a>
+        <p>&nbsp;E-mail:&nbsp;</p>
+        <a href="mailto:advshatohin@gmail.com">advshatohin@gmail.com;</a>
+        <p>&nbsp;Адрес: Тверская, 9</p>
+      </div>
+
+      <div class="menu">
+        <div class="menu-btn btn">
+          <a href="./../../index.html">На главную</a>
+        </div>
+        <div class="menu-btn btn">
+          <a href="./../index.html">К разделам</a>
+        </div>
+        <div class="menu-btn btn">
+          <a href="https://www.youtube.com/channel/UC6h5Be9C0QD7EF3_cO52Mpw"
+            >Мы в Youtube</a
+          >
+        </div>
+      </div>
+      <div class="category" id="app" v-if="currentCategory<0">
+        <h1>Выберите интересующую вас категорию</h1>
+        <div class="category-list">
+          <div
+            v-for="(item, index) in categorys"
+            :key="index"
+            class="category-item btn"
+            @click="categoryChose(index)"
+          >
+            <p>{{item.name}}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="question" v-else-if="currentQuestion != undefined">
+        <h2>{{currentQuestion.text}}</h2>
+        <form action="">
+          <template
+            v-for="(item, index) in currentQuestion.answer"
+            :key="index"
+          >
+            <div class="answer">
+              <input
+                type="radio"
+                :id="index"
+                :value="index"
+                name="answer"
+                v-model="currentAnswer"
+              />
+              <label :for="index">{{item.text}}</label>
+            </div>
+          </template>
+
+          <div class="btn" @click="acceptAnswer">
+            <p>{{textBtn}}</p>
+          </div>
+        </form>
+      </div>
+
+      <footer>
+        <p>&copy; Структура, дизайн, оформление сайта. Шатохин М.Ю., 2020</p>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
